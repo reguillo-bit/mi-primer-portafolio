@@ -1,0 +1,11 @@
+import { createApp } from "vue";
+import App from "./App.vue";
+import router from "./router";
+import PerfilComponent from "./components/PerfilComponent.vue";
+import LenguajesComponent from "./components/LenguajesComponent.vue";
+import CardComponent from "./components/CardComponent.vue";
+const app = createApp(App).use(router);
+app.component("CardComponent", CardComponent);
+app.component("PerfilComponent", PerfilComponent);
+app.component("LenguajesComponent", LenguajesComponent);
+app.mount("#app");
