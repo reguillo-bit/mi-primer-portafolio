@@ -2,62 +2,21 @@
   <div class="carta">
     <img
       width="60%"
-      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzV0IjWnaMUotvhZEVsyc6-Ttut46mWC6yhSrQia7NSQ&s=10"
-      alt=""
+      :src="require(`@/assets/${cardimagen}`)"
+      alt="imagen.png"
     />
-    <p>Lenguaje:python</p>
-    <p>Nivel:20%</p>
+    <p>{{ nombre }}</p>
+    <p>Nivel:{{ nivel }}</p>
   </div>
 </template>
 
 <script>
 export default {
   name: "CardComponent",
-  data() {
-    return {
-      cardimagen: String,
-      lenguage: String,
-      nivel: Number,
-      lenguages: [
-        {
-          Img: "https://w7.pngwing.com/pngs/266/560/png-transparent-python-computer-icons-programmer-javascript-programming-language-python-logo-angle-text-logo.png",
-          Nombre: "Python",
-          Nivel: 50,
-        },
-        {
-          Img: "",
-          Nombre: "C#",
-          Nivel: 30,
-        },
-        {
-          Img: "",
-          Nombre: "Java",
-          Nivel: 40,
-        },
-        {
-          Img: "",
-          Nombre: "C++",
-          Nivel: 10,
-        },
-        {
-          Img: "",
-          Nombre: "Html",
-          Nivel: 50,
-        },
-      ],
-      frameworks: [
-        {
-          Img: "",
-          Nombre: ".Netframework",
-          Nivel: 40,
-        },
-        {
-          Img: "",
-          Nombre: "Vue.js",
-          Nivel: 40,
-        },
-      ],
-    };
+  props: {
+    cardimagen: String,
+    nombre: String,
+    nivel: Number,
   },
 };
 </script>
@@ -74,5 +33,7 @@ export default {
 .carta:hover {
   background-color: #010081;
   cursor: pointer;
+  transform: scale(1.1);
+  color: azure;
 }
 </style>

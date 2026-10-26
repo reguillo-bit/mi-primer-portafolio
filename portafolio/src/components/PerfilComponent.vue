@@ -9,13 +9,13 @@
           <p>Mi perfil</p>
           <button @click="abrirperfil" class="closable">x</button>
         </div>
-        <div class="">
-          <img :src="imagen" class="fotoperfil" />
-          <p class="datos">Nombre: {{ nombre }}</p>
-          <p class="datos">Edad:{{ edad }}</p>
-          <p class="datos">Descripcion:{{ descripcion }}</p>
-        </div>
-        <section>
+        <div class="barraperfil">
+          <img :src="require(`@/assets/fotoperfil.jpg`)" class="fotoperfil" />
+          <p class="datos">Nombre: Cesar Antonio Reguillo Torrecilla</p>
+          <p class="datos">Edad:26</p>
+          <p class="datos">
+            Descripcion:Estudiante de desarrllo de sofware III semestre
+          </p>
           <h2>Redes sociales</h2>
           <li>
             <a href="https://github.com/reguillo-bit">Github</a>
@@ -23,8 +23,7 @@
           <li>
             <p>Correo: reguillotorresillacesar@gmail.com</p>
           </li>
-          <li></li>
-        </section>
+        </div>
       </div>
     </span>
   </div>
@@ -60,16 +59,16 @@ export default {
 <style>
 .datos {
   display: flex;
-  width: 100%;
-  height: 20px;
+  width: 90%;
+  height: auto;
   background-color: #c0c0c0;
   border: solid #595959 3px;
 }
 .barraperfil {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: center;
   height: 98vh;
   width: 400px;
   box-sizing: border-box;
@@ -80,8 +79,9 @@ export default {
   border-bottom-right-radius: 10px;
 }
 .fotoperfil {
-  margin-top: 20px;
+  margin-top: -90px;
   display: flex;
+  object-fit: cover;
   width: 300px;
   height: 300px;
   border-radius: 50%;
@@ -90,7 +90,7 @@ export default {
 .barraopciones {
   display: flex;
   color: aliceblue;
-  justify-self: start;
+
   align-items: center;
   justify-content: center;
   height: 25px;
